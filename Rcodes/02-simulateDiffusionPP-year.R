@@ -73,7 +73,7 @@ for(sim in 1:3){
       }
       #need to check if entered west of 23°E and north of 13°N (repro area of Tchad)
       arrivedChad= c(arrivedChad, Narr<-sum(npp$x < 23 & npp$y>13) )
-      png(paste0("res/year",year,"/sim",sim,"/simPP-",ifelse(jj<=9,paste0("00",jj),ifelse(jj<=99,paste0("0",jj),jj),".png"),width=9.6,height=8,units="in",res=150)
+      png(paste0("res/year",year,"/sim",sim,"/simPP-",ifelse(jj<=9,paste0("00",jj),ifelse(jj<=99,paste0("0",jj),jj)),".png"),width=9.6,height=8,units="in",res=150)
       map("world",xlim=c(-25,45),ylim=c(0,40),main="")
       plot(npp,pch=".",add=T,col=2)
       plot(myO,add=T,lwd=4)
